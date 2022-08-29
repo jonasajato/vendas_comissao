@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Vendas {
+    static java.util.Scanner UI = new Scanner(System.in);
+    public static void main(String[] args) {
+        //Escrever um algoritmo que leia o nome de um vendedor, o seu salario fixo e o total
+        //de vendas efetuadas por ele no mes (em dinheiro). Sabendo que este vendedor
+        // ganha 15% de comissao sobre suas vendas efetuadas, informar seu nome, o salario fixo e o
+        //salario no final do mes.
+
+        double salario1, venda1, venda2, venda3, venda4, venda5, total1, total2;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o nome do vendedor: ");
+        String Name = UI.nextLine();
+        System.out.println("Digite qual o salario fixo dele: ");
+        salario1 = entrada.nextDouble();
+        System.out.println("Digite o valor das vendas do vendedor: ");
+        venda1 = entrada.nextDouble();
+        venda2 = entrada.nextDouble();
+        venda3 = entrada.nextDouble();
+        venda4 = entrada.nextDouble();
+        venda5 = entrada.nextDouble();
+
+        total1 = Math.round(venda1 + venda2 + venda3 + venda4 + venda5);
+        total2 = Math.round((0.15*total1));
+        System.out.println("O vendedor " + Name + " tem o salario fixo de R$ " + salario1 +
+                " e neste mes vendeu um total de R$ " + total1 + "\ncom uma comissao de " + total2 +
+                " seu salario total foi de R$ " + (salario1 + total2 + "."));
+
+    }
+}
